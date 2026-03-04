@@ -1,6 +1,6 @@
 {
   "name": "numradix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Number base conversion toolkit — bases 2–36, BigInt precision, custom alphabets, formatting. Zero dependencies. TypeScript-first.",
   "keywords": [
     "base",
