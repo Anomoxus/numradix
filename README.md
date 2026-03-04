@@ -4,7 +4,6 @@
 
 [![npm](https://img.shields.io/npm/v/numradix)](https://www.npmjs.com/package/numradix)
 [![license](https://img.shields.io/npm/l/numradix)](./LICENSE)
-[![build](https://img.shields.io/github/actions/workflow/status/MaxGrushevsky/numradix/ci.yml)](https://github.com/MaxGrushevsky/numradix/actions)
 
 ## Features
 
